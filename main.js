@@ -1,5 +1,7 @@
 console.log("Javascript revision + DOM intro")
 
+
+console.log("MULTIPLICACIÓN");
 // Crea una función multiplicacion que espere dos parámetros a y b y que devuelva la multiplicación de los mismos.
 
 function multiply(a,b) {
@@ -8,7 +10,7 @@ function multiply(a,b) {
 
 console.log(multiply(3,4));
 
-
+console.log("EDAD");
 // Crea un programa que pida al usuario su edad y, dependiendo de la misma, muestre por consola uno de los siguientes mensajes: "Eres menor de edad", "Eres mayor de edad" o "Eres un adulto mayor". Debes utilizar un condicional if/else.
 
 
@@ -29,6 +31,9 @@ console.log(multiply(3,4));
 
 // console.log(ageism());
 
+
+
+console.log("SUMAR");
 // Crea la función sumaTresNumeros que reciba tres números como argumento y devuelva la suma de los mismos. Si alguno de los argumentos no es un número, debe devolver el string "Debo ser ejecutada con números".
 
 function sumaTresNumeros(a,b,c) {
@@ -42,20 +47,26 @@ function sumaTresNumeros(a,b,c) {
 console.log(sumaTresNumeros(100, 50, 4));
 
 
-
+console.log("3 CARACTERES");
 // Crea la función primerosTresCaracteres que reciba un string como argumento y devuelva los tres primeros caracteres del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de tres caracteres, debe devolver el string completo.
 
 
 function primerosTresCaracteres(string) {
     if (typeof string !== "string") {
         return "Debo ser ejecutada con un string";
+    } else if (string.length <= 2) {
+        return string; 
+    } else {
+        return string[0] + string[1] + string[2];
     }
 
-    return string[0] + string[1] + string[2];
 }
-
+console.log(primerosTresCaracteres("Hi"));
 console.log(primerosTresCaracteres("Hello"));
 
+
+
+console.log("PRECIO con IVA");
 // Crea la función getPrecioMostrarIVA para que devuelva una cadena de texto con formato precio con dos decimales y con el IVA ya incluido. Para 2 debería devolver 2.42 € (suponiendo un IVA del 21%). Si la función no recibe un número debería devolver devolver 'no es un formato correcto'.
 
 
@@ -72,22 +83,29 @@ function getPrecioMostrarIva(precio) {
 console.log(getPrecioMostrarIva(50.122344));
 
 
+console.log("EXTRAS");
 // Ejercicios extras
+
+console.log("PENULTIMO CAR");
 // Crea la función penultimoCaracter que reciba un string como argumento y devuelva el penúltimo carácter del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de dos caracteres, debe devolver el primer carácter.
 
 
 function penultimoCaracter(string) {
     if (typeof string !== "string") {
         return "Debo ser ejecutada con un string";
-    } 
-
-    return string[string.length - 1];
+    } else if (string.length < 2) {
+        return string[0];
+        } else {
+           return string[string.length - 2];
+}
 }
 
-console.log(penultimoCaracter("Wow"));
+console.log(penultimoCaracter("W"));
 
-
+console.log("VOCALES");
 // Crea la función cuentaVocales que reciba un string como argumento y devuelva el número de vocales que contiene. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string".
+console.log("Opcion 1 - switch");
+
 
 function cuentaVocales(string) {
     if (typeof string !== "string") {
@@ -138,6 +156,31 @@ function cuentaVocales(string) {
 console.log(cuentaVocales("We are the champions"));
 
 
+console.log("Opcion 2 - nested loop");
+
+function cuentaVocalesDos(string) {
+    if (typeof string !== "string") {
+        return "Debo ser ejecutada con un string";
+    } 
+    
+    const vocales = "aáeéiíuúüoóäö";
+    let longitud = 0;
+
+    for (let i = 0; i < string.length; i++) {
+        for (let j = 0; j < vocales.length; j++) {
+            if (string[i] === vocales[j]) {
+                longitud += 1;
+                
+            }
+        }
+    }
+    return longitud;
+}
+    console.log(cuentaVocalesDos("We are the Champions"))
+
+
+
+console.log("POTENCIA");
 // Crea la función potencia que acepte como argumento dos números y devuelva el resultado de elevar el primer número a la potencia del segundo número.
 
 
@@ -148,6 +191,9 @@ function potencia(a,b) {
 
 console.log(potencia(5,3));
 
+
+
+console.log("BOTÓN DOM");
 
 // Crea un botón en tu archivo HTML
 // Llama a ese botón en tu archivo js y muestralo por consola
