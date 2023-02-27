@@ -12,22 +12,22 @@ console.log(multiply(3,4));
 // Crea un programa que pida al usuario su edad y, dependiendo de la misma, muestre por consola uno de los siguientes mensajes: "Eres menor de edad", "Eres mayor de edad" o "Eres un adulto mayor". Debes utilizar un condicional if/else.
 
 
-function ageism() {
-let age = prompt("Cuántos años tienes?");
-age = +age;
+// function ageism() {
+// let age = prompt("Cuántos años tienes?");
+// age = +age;
    
-if (isNaN(age) === true) {       //To check if age is NaN
-    return ("La edad debe ser un número.")
-} else if (age < 18) {
-    return "Eres menor de edad.";
-} else if (age >= 18 && age < 65) {
-    return "Eres mayor de edad.";
-} else {
-    return "Eres un adulto mayor.";
-}
-}
+// if (isNaN(age) === true) {       //To check if age is NaN
+//     return ("La edad debe ser un número.")
+// } else if (age < 18) {
+//     return "Eres menor de edad.";
+// } else if (age >= 18 && age < 65) {
+//     return "Eres mayor de edad.";
+// } else {
+//     return "Eres un adulto mayor.";
+// }
+// }
 
-console.log(ageism());
+// console.log(ageism());
 
 // Crea la función sumaTresNumeros que reciba tres números como argumento y devuelva la suma de los mismos. Si alguno de los argumentos no es un número, debe devolver el string "Debo ser ejecutada con números".
 
@@ -149,8 +149,6 @@ function potencia(a,b) {
 console.log(potencia(5,3));
 
 
-
-
 // Crea un botón en tu archivo HTML
 // Llama a ese botón en tu archivo js y muestralo por consola
 
@@ -166,7 +164,6 @@ function msg() {
 
 
 // Investiga qué es addEventListener. Implementa que cuando el usuario haga “click” en el botón se ejecute la función que habías creado.
-
 
 document.getElementById("btn").addEventListener("click", msg);
 
